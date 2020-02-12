@@ -1,32 +1,11 @@
-<html>
-    <head>
-      <title>Vue Basic</title>
-      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-      <style>
-          .one {
-            color: darkblue;
-          }
-          .two {
-            text-decoration: line-through;
-          }
-      </style>
-    </head>
-    <body>
-        <h1>Vue Basic</h1>
-        <!-- {{ title }} outside the scope what vue is controlling -->
-        <div id="app">
-          <!-- {{ }}: Vue's template syntax模板語法 -->
-          <h2>{{ title }}</h2> 
-          <p>{{ greet('morning') }}</p>
-
-          <!-- <a href="{{ url }}">YouTube</a> -->
-          <!-- error -->
-          <a v-bind:href="url">YouTube</a>
-
-          <div v-bind:class="classes">Classes from Instance</div>
-
-          <input type="text" v-bind:value="name">
-        </div>
-        <script src="app.js"></script>
-    </body>
-</html> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>myproject</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
