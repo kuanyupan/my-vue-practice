@@ -39,6 +39,8 @@ export default {
       console.log(payload);
       // The filter() method creates an array filled with all array elements that pass a test (provided as a function)
       this.friends = this.friends.filter(friend => {
+        // return true -> keep friend inside the array
+        // return false -> filter friend out of the array
         return friend.name !== payload.name
       })
     }
