@@ -3,7 +3,7 @@
         <h2>All Friends</h2>
         <!-- need key value property(attribute) with a unique value that can identify -->
         <div v-for="(friend, index) in friends" :key="index">
-            <span>{{ friend.name }}</span>
+            <span @click="unfriends(friend.name)">{{ friend.name }}</span>
         </div>
     </div>
 </template>
@@ -16,6 +16,14 @@ export default {
     data() {
         return {
             
+        }
+    },
+    methods: {
+        unfriends(name) {
+            // a method that we can make a custom event from this component
+            // 'delete' -> custom event
+            // {name} = {name : name} (ES6)
+            this.$emit('delete', {name})
         }
     }
 }
